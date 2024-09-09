@@ -10,4 +10,5 @@ public class Constants {
 
     public static final String FILLING_NAME = "Начинка";
     public static final float FILLING_PRICE = 10F;
+
 }

@@ -5,12 +5,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import static praktikum.constants.Constants.*;
-
 import static praktikum.IngredientType.*;
 
 @RunWith(Parameterized.class)
 public class IngredientTest {
 
+    private static final float DELTA = 0.00F;
     public final IngredientType type;
     public final String name;
     public final float price;
@@ -46,7 +46,7 @@ public class IngredientTest {
     @Test
     public void ingredientPriceTest() {
         Ingredient ingredient = new Ingredient(type, name, price);
-        Assert.assertEquals("Некорректная стоимость ингредиента", price, ingredient.getPrice(), 0);
+        Assert.assertEquals("Некорректная стоимость ингредиента", price, ingredient.getPrice(), DELTA);
     }
     @Test
     public void ingredientTypeTest() {

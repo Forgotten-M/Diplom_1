@@ -13,6 +13,8 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
 
+    private static final float DELTA = 0.00F;
+
     @Mock
     private Bun bun;
     @Mock
@@ -27,7 +29,7 @@ public class BurgerTest {
         burger = new Burger();
     }
 
-@Test
+    @Test
     public void setBunsTest() {
         burger.setBuns(bun);
         assertEquals(bun, burger.bun);
@@ -63,7 +65,7 @@ public class BurgerTest {
         when(ingredient1.getPrice()).thenReturn(100F);
         burger.addIngredient(ingredient2);
         when(ingredient2.getPrice()).thenReturn(150F);
-        assertEquals(350, burger.getPrice(), 0);
+        assertEquals(350, burger.getPrice(), DELTA);
     }
 
     @Test

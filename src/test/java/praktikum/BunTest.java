@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 import static praktikum.constants.Constants.*;
 
 public class BunTest {
+    private static final float DELTA = 0.00F;
     Bun bun = new Bun(BUN_NAME, BUN_PRICE);
 
     @Test
@@ -15,6 +16,6 @@ public class BunTest {
 
     @Test
     public void getPriceTest() {
-        assertEquals(BUN_PRICE, bun.getPrice(), 0);
+        assertEquals(BUN_PRICE, bun.getPrice(), DELTA);
     }
 }
